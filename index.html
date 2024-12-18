@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color picker website </title>
+</head>
+<style>
+    /* Include the CSS code provided here */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    section {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        color: #fff;
+        transition: background-color 0.3s ease;
+    }
+
+    button#myButton {
+        background-color: #501937;
+    }
+
+    button#myButton2 {
+        background-color: #008793;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    h2 {
+        margin: 20px 0;
+    }
+
+    .copyCode {
+        background-color: #f7f7f7;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: monospace;
+        display: inline-block;
+    }
+
+    .copyCode:hover {
+        background-color: #e0e0e0;
+    }
+</style>
+
+<body>
+
+    <section>   
+        <h2>Color Picker..👀</h2>
+        <!-- <marquee width="50%" behavior="alternate" bgcolor="Cornsilk"  ;>  
+            The "Color Picker" project, created using HTML, CSS, and JavaScript, is a handy tool for selecting background colors. Users can easily pick a color, 
+        
+            </marquee>  -->
+        <div>
+            <button id="myButton">#501937</button>
+            <button id="myButton2">#008793</button>
+        </div>
+        <h2>Copy Your Code Here..👇🏻</h2>
+        <div class="copyCode">
+            background-image:linear-gradient(to right, rgb(92, 145,229), rgb(152, 63 198))
+        </div>
+    </section>
+
+    <script>
+        let btn1 = document.getElementById("myButton");
+        let btn2 = document.getElementById("myButton2");
+        let copyDiv = document.querySelector(".copyCode");
+        let rgb1 = "#004773";
+        let rgb2 = "#54d542";
+
+        const hexValues = () => {
+            let myHexValues = "0123456789abcdef";
+            let colors = "#";
+            for (let i = 0; i < 6; i++) {
+                colors = colors + myHexValues[Math.floor(Math.random() * 16)];
+            }
+            return colors;
+        };
+
+        const handleButton1 = () => {
+            rgb1 = hexValues();
+            console.log(rgb1);
+            btn1.innerText = rgb1;
+            document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
+            copyDiv.innerHTML = `background-image:linear-gradient(to right,  ${rgb1}, ${rgb2})`;
+        };
+
+        const handleButton2 = () => {
+            rgb2 = hexValues();
+            console.log(rgb2);
+            btn2.innerText = rgb2;
+            document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
+            copyDiv.innerHTML = `background-image:linear-gradient(to right,  ${rgb1}, ${rgb2})`;
+        };
+
+        btn1.addEventListener("click", handleButton1);
+        btn2.addEventListener("click", handleButton2);
+
+
+        copyDiv.addEventListener("click", () => {
+            navigator.clipboard.writeText(copyDiv.innerText)
+                .then(() => {
+                    alert("Text copied to clipboard!");
+                })
+                .catch(err => {
+                    console.error('Failed to copy text: ', err);
+                });
+        });
+
+
+        // copyDiv.addEventListener ("click", () =>{
+        //     navigator.clipboard.writeText(copyDiv.innerText);
+        // });
+    </script>
+
+</body>
+
+</html>
