@@ -1,4 +1,5 @@
 🎨Color Picker – Gradient Generator & Color Code Copier
+
 This is a simple and useful Color Picker project built using HTML, CSS, and JavaScript. It allows users to:
 🌈 Generate beautiful gradient color combinations
 🔍 Preview the gradient in real-time
@@ -9,7 +10,7 @@ This is a simple and useful Color Picker project built using HTML, CSS, and Java
 Real-time gradient background preview
 Color pickers for choosing two custom colors
 Copy-to-clipboard buttons for easy color code copying
-Responsive and clean UI
+Responsive and clean UI 
 
 🚀 Technologies Used
 HTML
