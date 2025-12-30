@@ -12,7 +12,6 @@ Color pickers for choosing two custom colors
 Copy-to-clipboard buttons for easy color code copying
 Responsive and clean UI 
 
-
 🚀 Technologies Used
 HTML
 CSS
