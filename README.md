@@ -15,6 +15,7 @@ Responsive and clean UI
 
 🚀 Technologies Used
 HTML
+
 CSS
 JavaScript
 
