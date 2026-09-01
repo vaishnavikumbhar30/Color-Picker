@@ -7,7 +7,6 @@ This is a simple and useful Color Picker project built using HTML, CSS, and Java
 💡 Use the copied color codes directly in any website or design project
 
 🔧 Features
-
 Real-time gradient background preview
 Color pickers for choosing two custom colors
 Copy-to-clipboard buttons for easy color code copying
